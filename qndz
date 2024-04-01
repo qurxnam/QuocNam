@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  // Seed the random number generator with the current time
+  srand(time(NULL));
+
+  // Generate a random number between 0 and RAND_MAX (usually 32767)
+  int random_number = rand();
+
+  // Restrict the range to 1-10 using the modulo operator (%)
+  int number_between_1_and_10 = (random_number % 10) + 1;
+
+  // Print the random number
+  printf("Random number between 1 and 10: %d\n", number_between_1_and_10);
+
+  return 0;
+}
